@@ -22,7 +22,7 @@ def dataFilter(dataLog, logger, lastPosition=0):
     try:
         with open(dataLog, 'r') as f:
             f.seek(lastPosition)
-                for line in f:
+            for line in f:
                 if re.match(r'^\d\d\d\d-', line):
                     getTime = re.search(r'\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d', line).group()
                     unixTimestamp = int(time.mktime(time.strptime(getTime, "%Y-%m-%d %H:%M:%S")))
@@ -60,7 +60,7 @@ def checkTestStatus(logger):
             pidCmd = ' '.join(psutil.Process(pid).cmdline())
             if 'ycsb' in pidCmd:
                 if 'mongo' in pidCmd:
-                return True
+                    return True
         except Exception:
             logger.warning('Get pid info fail: %d' % pid)
 
