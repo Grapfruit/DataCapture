@@ -19,6 +19,9 @@ WantedBy=multi-user.target" > /lib/systemd/system/performanceTest.service
 # chmod
 chmod 644 /lib/systemd/system/performanceTest.service
 
+# pip
+pip install pymysql configparser psutil
+
 # start server
 systemctl daemon-reload
 systemctl enable performanceTest.service
