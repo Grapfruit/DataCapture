@@ -10,7 +10,7 @@ import configparser
 '''
 get value from conf
 '''
-def getValue(section, key, path="/home/lenovo/Documents/performanceTest/performanceTest.conf"):
+def getValue(section, key, path="./performanceTest.conf"):
     conf = configparser.ConfigParser()
     try:
         conf.read(path)
