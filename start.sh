@@ -19,6 +19,10 @@ WantedBy=multi-user.target" > /lib/systemd/system/performanceTest.service
 # chmod
 chmod 644 /lib/systemd/system/performanceTest.service
 
+# /etc/performanceTest
+mkdir /etc/performanceTest
+mv performanceTest /etc/performanceTest
+
 # pip
 pip install pymysql configparser psutil
 
