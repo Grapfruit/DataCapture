@@ -5,7 +5,7 @@ performanceTestPath=`pwd`
 
 # /etc/performanceTest
 mkdir /etc/performanceTest
-mv performanceTest /etc/performanceTest
+mv performanceTest.conf /etc/performanceTest/
 
 # pip
 pip install pymysql configparser psutil
