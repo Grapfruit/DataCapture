@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author：RYB
 
-performanceTestPath='/home/lenovo/Documents/performanceTest'
+performanceTestPath=`pwd`
 
 # create server
 echo "
@@ -29,6 +29,7 @@ pip install pymysql configparser psutil
 # start server
 systemctl daemon-reload
 systemctl enable performanceTest.service
-systemctl start performanceTest.service
+systemctl restart performanceTest.service
+systemctl status performanceTest.service
 
 
